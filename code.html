@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>rodfashion.ve — Sneaker &amp; Athletic Hub | USA ➔ Venezuela</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Google Fonts: Inter & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          },
+          animation: {
+            marquee: 'marquee 25s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col antialiased selection:bg-yellow-300 selection:text-black">
+<!-- Marquee Banner -->
+<div class="bg-black text-white text-[11px] font-black uppercase tracking-widest overflow-hidden py-2 border-b border-zinc-800 relative z-50">
+<div class="flex space-x-8 animate-marquee whitespace-nowrap w-max">
+<span class="flex items-center gap-2 text-lime-400">
+<i class="w-3.5 h-3.5 fill-current" data-lucide="zap"></i> ENVÍOS DIRECTOS USA ➔ VENEZUELA (AÉREO &amp; MARÍTIMO)
+      </span>
+<span class="text-zinc-500">•</span>
+<span class="flex items-center gap-2">
+<i class="w-3.5 h-3.5 text-orange-500 fill-current" data-lucide="flame"></i> CALZADO 100% ORIGINAL DE TIENDAS OFICIALES
+      </span>
+<span class="text-zinc-500">•</span>
+<span class="flex items-center gap-2 text-blue-400">
+<i class="w-3.5 h-3.5" data-lucide="phone"></i> WHATSAPP: +58 424-4126982
+      </span>
+<span class="text-zinc-500">•</span>
+<span class="text-lime-400 font-extrabold">RODFASHION.VE — SNEAKER &amp; ATHLETIC HUB</span>
+<span class="text-zinc-500">•</span>
+<!-- Duplicate for smooth seamless loop -->
+<span class="flex items-center gap-2 text-lime-400">
+<i class="w-3.5 h-3.5 fill-current" data-lucide="zap"></i> ENVÍOS DIRECTOS USA ➔ VENEZUELA (AÉREO &amp; MARÍTIMO)
+      </span>
+<span class="text-zinc-500">•</span>
+<span class="flex items-center gap-2">
+<i class="w-3.5 h-3.5 text-orange-500 fill-current" data-lucide="flame"></i> CALZADO 100% ORIGINAL DE TIENDAS OFICIALES
+      </span>
+<span class="text-zinc-500">•</span>
+<span class="flex items-center gap-2 text-blue-400">
+<i class="w-3.5 h-3.5" data-lucide="phone"></i> WHATSAPP: +58 424-4126982
+      </span>
+<span class="text-zinc-500">•</span>
+<span class="text-lime-400 font-extrabold">RODFASHION.VE — SNEAKER &amp; ATHLETIC HUB</span>
+</div>
+</div>
+<!-- Header Navigation -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-200 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+<!-- Brand Logo -->
+<div class="flex items-center space-x-3 cursor-pointer" onclick="resetFilters()">
+<div class="w-11 h-11 bg-black text-lime-400 rounded-2xl flex items-center justify-center font-black tracking-tighter text-xl shadow-lg border-2 border-lime-400 transform -rotate-3 hover:rotate-0 transition-transform">
+          RF
+        </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h1 class="text-2xl font-black tracking-tighter text-slate-900 italic uppercase">
+              rodfashion<span class="text-lime-500 font-black">.ve</span>
+</h1>
+<span class="bg-black text-lime-400 text-[9px] font-extrabold px-1.5 py-0.5 rounded tracking-widest">
+              USA ➔ VE
+            </span>
+</div>
+<p class="text-[10px] tracking-widest uppercase font-bold text-slate-400">
+            Performance &amp; Streetwear Catalog
+          </p>
+</div>
+</div>
+<!-- Search Box -->
+<div class="hidden md:flex flex-1 max-w-md mx-6 relative">
+<i class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" data-lucide="search"></i>
+<input class="w-full pl-11 pr-8 py-2.5 bg-slate-100 border border-slate-200 rounded-2xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black focus:bg-white transition-all shadow-inner" id="searchInput" oninput="handleSearch(this.value)" placeholder="Buscar Nike, Jordan, Yeezy, Running..." type="text"/>
+<button class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-black text-xs font-bold" id="clearSearchBtn" onclick="clearSearch()">
+          ✕
+        </button>
+</div>
+<!-- User Auth & Actions -->
+<div class="hidden md:flex items-center space-x-3">
+<!-- Admin Toggle Button -->
+<button class="px-3.5 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 border-2 bg-slate-100 text-slate-800 hover:bg-slate-200 border-slate-200" id="adminToggleBtn" onclick="toggleAdminMode()">
+<i class="w-4 h-4" data-lucide="shield-alert"></i>
+<span id="adminToggleText">Admin Panel</span>
+</button>
+<!-- Google User Profile Indicator -->
+<div class="flex items-center space-x-2 bg-slate-100 border border-slate-200 rounded-full p-1 pr-3" id="userProfileBadge">
+<div class="w-7 h-7 rounded-full bg-black text-lime-400 flex items-center justify-center text-xs font-black">
+            RF
+          </div>
+<span class="text-xs font-bold text-slate-800 max-w-[120px] truncate">
+            Admin Store
+          </span>
+</div>
+<!-- Shopping Cart Button -->
+<button class="relative p-2.5 bg-lime-400 hover:bg-lime-500 text-black rounded-2xl transition shadow-md flex items-center justify-center border-2 border-black" onclick="openCart()" title="Ver Carrito">
+<i class="w-5 h-5 font-bold" data-lucide="shopping-bag"></i>
+<span class="hidden absolute -top-1.5 -right-1.5 bg-black text-lime-400 text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-white animate-bounce" id="cartCountBadge">
+            0
+          </span>
+</button>
+</div>
+<!-- Mobile Menu & Cart Buttons -->
+<div class="flex md:hidden items-center space-x-2">
+<button class="relative p-2 bg-lime-400 text-black rounded-xl border border-black" onclick="openCart()">
+<i class="w-5 h-5" data-lucide="shopping-bag"></i>
+<span class="hidden absolute -top-1 -right-1 bg-black text-white text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center" id="cartCountBadgeMobile">
+            0
+          </span>
+</button>
+<button class="p-2 text-slate-800 bg-slate-100 rounded-xl" onclick="toggleMobileMenu()">
+<i class="w-6 h-6" data-lucide="menu" id="menuIcon"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Expanded Menu -->
+<div class="hidden md:hidden border-t border-slate-200 px-4 pt-3 pb-5 space-y-3 bg-white" id="mobileMenu">
+<div class="relative">
+<i class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" data-lucide="search"></i>
+<input class="w-full pl-10 pr-4 py-2.5 bg-slate-100 border border-slate-200 rounded-xl text-xs font-semibold" oninput="handleSearch(this.value)" placeholder="Buscar modelo o marca..." type="text"/>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-3 bg-black text-lime-400 rounded-xl text-xs font-black flex items-center justify-center gap-2 uppercase tracking-wider" onclick="toggleAdminMode(); toggleMobileMenu();">
+<i class="w-4 h-4" data-lucide="shield-alert"></i>
+<span id="adminToggleTextMobile">Panel de Administrador</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Header Section -->
+<section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-zinc-900 to-black text-white py-14 px-4 sm:px-6 lg:px-8 border-b-4 border-lime-400">
+<div class="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-lime-400/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+<div class="space-y-4 max-w-2xl text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lime-400/10 border border-lime-400/30 text-lime-400 text-xs font-black uppercase tracking-widest">
+<i class="w-4 h-4 fill-current animate-bounce" data-lucide="zap"></i>
+<span>Importación Directa USA 🇺🇸 ➔ 🇻🇪</span>
+</div>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-black italic tracking-tighter leading-none uppercase">
+          DROP EXCLUSIVO DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-emerald-300 to-teal-200">SNEAKERS</span>
+</h2>
+<p class="text-slate-300 text-sm sm:text-base font-medium max-w-xl leading-relaxed">
+          Consigue las últimas tendencias en calzado deportivo, running y streetwear importados desde las tiendas más prestigiosas de Estados Unidos con entrega 100% garantizada en Venezuela.
+        </p>
+<div class="pt-3 flex flex-wrap justify-center md:justify-start gap-4 text-xs font-bold text-slate-300">
+<div class="flex items-center gap-2 bg-zinc-900/80 px-3.5 py-2 rounded-xl border border-zinc-800">
+<i class="w-4 h-4 text-lime-400" data-lucide="check-circle-2"></i>
+<span>100% Auténticos</span>
+</div>
+<div class="flex items-center gap-2 bg-zinc-900/80 px-3.5 py-2 rounded-xl border border-zinc-800">
+<i class="w-4 h-4 text-blue-400" data-lucide="plane"></i>
+<span>Envíos Aéreos &amp; Marítimos</span>
+</div>
+<div class="flex items-center gap-2 bg-zinc-900/80 px-3.5 py-2 rounded-xl border border-zinc-800">
+<i class="w-4 h-4 text-emerald-400" data-lucide="phone"></i>
+<span>+58 424-4126982</span>
+</div>
+</div>
+</div>
+<!-- Featured Highlight Card -->
+<div class="w-full md:w-80 bg-gradient-to-b from-zinc-800 to-zinc-900 p-5 rounded-3xl border border-zinc-700 shadow-2xl relative group hover:scale-105 transition-transform duration-300">
+<div class="absolute top-3 right-3 bg-lime-400 text-black font-black text-[10px] uppercase px-2 py-0.5 rounded tracking-wider">
+          NEW DROP
+        </div>
+<div class="w-full h-48 rounded-2xl overflow-hidden bg-black mb-4 border border-zinc-800 relative">
+<img alt="Air Jordan 1 Retro High OG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<h4 class="font-black text-white text-base italic uppercase tracking-tight">Air Jordan 1 Chicago</h4>
+<div class="flex items-center justify-between mt-2">
+<span class="text-xl font-black text-lime-400">$185 USD</span>
+<button class="bg-white text-black hover:bg-lime-400 font-extrabold text-xs px-3 py-1.5 rounded-xl transition uppercase tracking-wider" onclick="openProductDetail(0)">
+            Ver Par
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Catalog Section -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+<!-- Brand & Category Controls -->
+<div class="space-y-4">
+<!-- Brand Pills -->
+<div class="flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none">
+<span class="text-xs font-black uppercase text-slate-400 pr-2 flex items-center gap-1">
+<i class="w-3.5 h-3.5" data-lucide="tag"></i> Marcas:
+        </span>
+<div class="flex items-center space-x-2" id="brandsContainer">
+<!-- Rendered by JS -->
+</div>
+</div>
+<!-- Category Pills & Admin Actions -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+<div class="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+<span class="text-xs font-black uppercase text-slate-400 pr-2 flex items-center gap-1">
+<i class="w-3.5 h-3.5" data-lucide="filter"></i> Estilos:
+          </span>
+<div class="flex items-center space-x-2" id="categoriesContainer">
+<!-- Rendered by JS -->
+</div>
+</div>
+<!-- Admin Header Action -->
+<div class="hidden flex items-center space-x-3 bg-black text-white p-2.5 px-4 rounded-2xl border-2 border-lime-400 shadow-lg" id="adminControlsBar">
+<div class="text-xs font-bold text-slate-200">
+<span class="text-lime-400 uppercase font-black">Panel Administrador Activo</span>
+</div>
+<button class="flex items-center gap-1.5 bg-lime-400 hover:bg-lime-500 text-black text-xs font-black px-3.5 py-1.5 rounded-xl transition uppercase tracking-wider" onclick="openProductModal()">
+<i class="w-4 h-4" data-lucide="plus"></i> Agregar Zapato
+          </button>
+</div>
+</div>
+</div>
+<!-- Product Grid Render -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+<!-- Injected via JavaScript -->
+</div>
+<!-- Empty State -->
+<div class="hidden py-20 text-center bg-white border-2 border-dashed border-slate-200 rounded-3xl p-8 max-w-lg mx-auto" id="emptyState">
+<i class="w-14 h-14 text-slate-300 mx-auto mb-3" data-lucide="shopping-bag"></i>
+<h3 class="text-lg font-black uppercase text-slate-800">Sin resultados encontrados</h3>
+<p class="text-xs text-slate-500 font-medium mt-1">Prueba cambiando la marca, categoría o limpia la búsqueda.</p>
+<button class="mt-4 bg-black text-white text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider hover:bg-slate-800" onclick="resetFilters()">
+        Ver Todo el Catálogo
+      </button>
+</div>
+</main>
+<!-- Product Detail Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md" id="productDetailModal">
+<div class="bg-white rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl relative border-2 border-black animate-in fade-in zoom-in-95 duration-200">
+<button class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black text-white flex items-center justify-center font-black text-sm hover:bg-lime-400 hover:text-black transition" onclick="closeProductDetail()">
+        ✕
+      </button>
+<div class="w-full h-80 bg-slate-100 relative">
+<img alt="" class="w-full h-full object-cover" id="modalDetailImage" src=""/>
+<div class="absolute bottom-4 left-4 bg-black/80 text-lime-400 px-3 py-1 rounded-xl text-xs font-black uppercase tracking-widest backdrop-blur-xs" id="modalDetailTag">
+<!-- Brand and category -->
+</div>
+</div>
+<div class="p-6 space-y-5">
+<div>
+<h3 class="text-2xl font-black text-slate-900 uppercase italic tracking-tight" id="modalDetailTitle"></h3>
+<p class="text-xs text-slate-500 font-medium mt-2 leading-relaxed" id="modalDetailDesc"></p>
+</div>
+<!-- Tallas Selector -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-xs font-black text-slate-900 uppercase tracking-wider">
+              Selecciona tu Talla (US Mens/Wmns):
+            </label>
+<span class="text-[10px] text-slate-400 font-bold uppercase">Medidas Estándar EE.UU.</span>
+</div>
+<div class="flex flex-wrap gap-2" id="modalDetailSizes">
+<!-- Render sizes dynamically -->
+</div>
+</div>
+<!-- Modal Actions -->
+<div class="pt-4 border-t border-slate-200 flex items-center justify-between gap-4">
+<div>
+<span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Total USD</span>
+<span class="text-2xl font-black text-slate-900" id="modalDetailPrice"></span>
+</div>
+<div class="flex items-center space-x-2">
+<button class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 font-black text-xs px-4 py-3.5 rounded-2xl uppercase tracking-wider transition" onclick="addCurrentModalToCart()">
+<i class="w-4 h-4 text-black" data-lucide="shopping-cart"></i>
+<span>Agregar al Carrito</span>
+</button>
+<button class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs px-5 py-3.5 rounded-2xl shadow-lg transition uppercase tracking-wider" onclick="buyCurrentModalWhatsApp()">
+<i class="w-4 h-4 fill-current" data-lucide="phone"></i>
+<span>Pedir por WhatsApp</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Shopping Cart Drawer -->
+<div class="hidden fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-xs" id="cartDrawer">
+<div class="bg-white max-w-md w-full h-full flex flex-col justify-between p-6 shadow-2xl border-l-4 border-black animate-in slide-in-from-right duration-300">
+<!-- Cart Header -->
+<div>
+<div class="flex items-center justify-between border-b border-slate-200 pb-4">
+<div class="flex items-center gap-2">
+<i class="w-5 h-5 text-black" data-lucide="shopping-bag"></i>
+<h3 class="text-lg font-black uppercase tracking-tight text-slate-900">Tu Carrito de Compras</h3>
+</div>
+<button class="p-2 text-slate-400 hover:text-black font-black text-lg" onclick="closeCart()">
+            ✕
+          </button>
+</div>
+<!-- Cart List -->
+<div class="divide-y divide-slate-100 max-h-[60vh] overflow-y-auto my-4 pr-1" id="cartList">
+<!-- Rendered dynamically -->
+</div>
+</div>
+<!-- Cart Footer -->
+<div class="border-t border-slate-200 pt-4 space-y-4">
+<div class="flex justify-between items-center text-sm font-black uppercase">
+<span>Subtotal Estimado:</span>
+<span class="text-xl text-black" id="cartSubtotal">$0 USD</span>
+</div>
+<p class="text-[10px] text-slate-400 font-semibold">
+          * El envío hacia Venezuela se coordina directamente por WhatsApp (+58 424-4126982).
+        </p>
+<button class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-300 text-white font-black text-xs uppercase tracking-widest rounded-2xl shadow-xl flex items-center justify-center gap-2 transition" id="checkoutBtn" onclick="handleWhatsAppCheckout()">
+<i class="w-4 h-4 fill-current" data-lucide="phone"></i>
+<span>Enviar Pedido a WhatsApp</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Admin Add/Edit Product Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs" id="productFormModal">
+<div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border-2 border-black">
+<button class="absolute top-4 right-4 text-slate-400 hover:text-black font-black text-base" onclick="closeProductModal()">
+        ✕
+      </button>
+<h3 class="text-base font-black text-slate-900 uppercase italic tracking-tight mb-4" id="formModalTitle">
+        Agregar Nuevo Zapato al Catálogo
+      </h3>
+<form class="space-y-3" id="productForm" onsubmit="handleProductFormSubmit(event)">
+<input id="formProductId" type="hidden" value=""/>
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">Nombre / Modelo</label>
+<input class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formTitle" placeholder="Ej: Nike Air Max 90" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">Marca</label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formBrand">
+<option value="Nike">Nike</option>
+<option value="Adidas">Adidas</option>
+<option value="Jordan">Jordan</option>
+<option value="Puma">Puma</option>
+<option value="New Balance">New Balance</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">Categoría</label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formCategory">
+<option value="Sneakers">Sneakers</option>
+<option value="Running">Running</option>
+<option value="Basketball">Basketball</option>
+<option value="Casual Sport">Casual Sport</option>
+<option value="Edición Limitada">Edición Limitada</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">Precio ($ USD)</label>
+<input class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formPrice" placeholder="120" required="" type="number"/>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">Badge</label>
+<select class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formBadge">
+<option value="NEW">NEW</option>
+<option value="HOT">HOT</option>
+<option value="TOP SELLER">TOP SELLER</option>
+<option value="USA EXCLUSIVE">USA EXCLUSIVE</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">
+            Tallas Disponibles (separadas por coma)
+          </label>
+<input class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formSizes" placeholder="8, 8.5, 9, 9.5, 10, 11" type="text"/>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">URL de la Imagen</label>
+<input class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formImage" placeholder="https://images.unsplash.com/..." required="" type="url"/>
+</div>
+<div>
+<label class="block text-[10px] font-black uppercase text-slate-700 mb-1">Descripción</label>
+<textarea class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-black" id="formDescription" placeholder="Detalles sobre materiales y confort..." rows="2"></textarea>
+</div>
+<div class="pt-2 flex justify-end space-x-2">
+<button class="px-4 py-2 border border-slate-200 text-slate-700 rounded-xl text-xs font-extrabold uppercase hover:bg-slate-100" onclick="closeProductModal()" type="button">
+            Cancelar
+          </button>
+<button class="px-5 py-2 bg-black text-lime-400 rounded-xl text-xs font-black uppercase tracking-wider hover:bg-slate-800" type="submit">
+            Guardar Zapato
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="bg-black text-slate-400 py-12 border-t-4 border-lime-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-3">
+<h4 class="text-white text-xl font-black italic tracking-tighter uppercase flex items-center gap-2">
+          rodfashion<span class="text-lime-400">.ve</span>
+</h4>
+<p class="text-xs text-slate-400 leading-relaxed font-medium">
+          Plataforma virtual especializada en la selección, venta e importación directa de calzado deportivo y streetwear exclusivo desde Estados Unidos a toda Venezuela.
+        </p>
+</div>
+<div class="space-y-2 text-xs font-medium">
+<h5 class="text-white font-black uppercase tracking-widest text-xs mb-3 text-lime-400">Servicios de Logística</h5>
+<p>✈️ Envíos Aéreos Prioritarios (Express)</p>
+<p>🚢 Envíos Marítimos Consolidados</p>
+<p>📦 Entregas directas a nivel nacional en Venezuela</p>
+</div>
+<div class="space-y-3 text-xs">
+<h5 class="text-white font-black uppercase tracking-widest text-xs text-lime-400">Atención Directa &amp; Admin</h5>
+<p class="text-slate-300 flex items-center gap-2 font-semibold">
+<i class="w-3.5 h-3.5 text-emerald-400" data-lucide="phone"></i> WhatsApp: +58 424-4126982
+        </p>
+<p class="text-slate-300 flex items-center gap-2 font-semibold">
+<i class="w-3.5 h-3.5 text-blue-400" data-lucide="mail"></i> Contacto: owsuper85@gmail.com
+        </p>
+<button class="mt-2 inline-flex items-center gap-2 bg-lime-400 text-black font-black px-4 py-2.5 rounded-xl text-xs hover:bg-lime-500 transition uppercase tracking-wider" onclick="window.open('https://wa.me/584244126982?text=¡Hola!%20Quisiera%20información%20sobre%20la%20importación%20de%20calzado%20en%20rodfashion.ve', '_blank')">
+<i class="w-4 h-4 fill-current" data-lucide="phone"></i> Consultar por WhatsApp
+        </button>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-zinc-800 text-center text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
+      © <span id="currentYear"></span> rodfashion.ve — Todos los derechos reservados. Sneakerhead USA to VE. | Contacto: owsuper85@gmail.com
+    </div>
+</footer>
+<!-- Application Logic -->
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Data State
+    const whatsappNumber = "584244126982";
+    const adminEmail = "owsuper85@gmail.com";
+
+    const INITIAL_PRODUCTS = [
+      {
+        id: "prod-1",
+        title: "Air Jordan 1 Retro High OG 'Chicago'",
+        brand: "Jordan",
+        category: "Basketball",
+        price: 185,
+        badge: "TOP SELLER",
+        sizes: ["7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11"],
+        image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&q=80&w=800",
+        description: "Ícono indiscutible del baloncesto y streetwear mundial. Importado directo desde tiendas oficiales de EE. UU."
+      },
+      {
+        id: "prod-2",
+        title: "Nike Air Max 270 React 'Volt'",
+        brand: "Nike",
+        category: "Running",
+        price: 135,
+        badge: "HOT",
+        sizes: ["8", "8.5", "9", "9.5", "10", "11"],
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+        description: "Amortiguación de máximo impacto con diseño futurista. Envíos prioritarios para Venezuela."
+      },
+      {
+        id: "prod-3",
+        title: "Adidas Yeezy Boost 350 V2",
+        brand: "Adidas",
+        category: "Edición Limitada",
+        price: 240,
+        badge: "USA EXCLUSIVE",
+        sizes: ["7.5", "8.5", "9.5", "10.5"],
+        image: "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&q=80&w=800",
+        description: "Tecnología Primeknit y suela de respuesta Boost ultra liviana. 100% auténticos."
+      },
+      {
+        id: "prod-4",
+        title: "Puma RS-X3 Puzzle Athletic",
+        brand: "Puma",
+        category: "Sneakers",
+        price: 95,
+        badge: "NEW",
+        sizes: ["6.5", "7", "8", "8.5", "9", "10"],
+        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=800",
+        description: "Estilo retro moderno voluminoso con detalles multiculturales. Entrega rápida."
+      },
+      {
+        id: "prod-5",
+        title: "New Balance 9060 'Sea Salt'",
+        brand: "New Balance",
+        category: "Casual Sport",
+        price: 160,
+        badge: "TOP SELLER",
+        sizes: ["8", "9", "9.5", "10", "11", "12"],
+        image: "https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&q=80&w=800",
+        description: "Reinterpretación dramática de los modelos clásicos 99X con barras estabilizadoras visuales."
+      },
+      {
+        id: "prod-6",
+        title: "Nike ZoomX Vaporfly NEXT% 2",
+        brand: "Nike",
+        category: "Running",
+        price: 210,
+        badge: "HOT",
+        sizes: ["8.5", "9", "10", "10.5"],
+        image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=80&w=800",
+        description: "Zapatilla de carreras para romper tus récords personales. Con placa de fibra de carbono."
+      }
+    ];
+
+    let products = [...INITIAL_PRODUCTS];
+    let cart = [];
+    let activeCategory = "Todos";
+    let activeBrand = "Todas";
+    let searchTerm = "";
+    let isAdminView = false;
+    let selectedProductModal = null;
+    let selectedSizeModal = "";
+
+    const categories = ["Todos", "Sneakers", "Running", "Basketball", "Casual Sport", "Edición Limitada"];
+    const brands = ["Todas", "Nike", "Adidas", "Jordan", "Puma", "New Balance"];
+
+    // Initialize UI
+    function init() {
+      renderBrandPills();
+      renderCategoryPills();
+      renderProducts();
+      updateCartUI();
+      lucide.createIcons();
+    }
+
+    function renderBrandPills() {
+      const container = document.getElementById('brandsContainer');
+      container.innerHTML = brands.map(brand => `
+        <button
+          onclick="setBrand('${brand}')"
+          class="px-4 py-1.5 rounded-xl text-xs font-extrabold uppercase transition-all whitespace-nowrap border ${
+            activeBrand === brand
+              ? "bg-slate-900 text-lime-400 border-slate-900 shadow-md"
+              : "bg-white text-slate-700 hover:bg-slate-100 border-slate-200"
+          }"
+        >
+          ${brand}
+        </button>
+      `).join('');
+    }
+
+    function renderCategoryPills() {
+      const container = document.getElementById('categoriesContainer');
+      container.innerHTML = categories.map(cat => `
+        <button
+          onclick="setCategory('${cat}')"
+          class="px-4 py-2 rounded-2xl text-xs font-black tracking-wide uppercase whitespace-nowrap transition-all ${
+            activeCategory === cat
+              ? "bg-lime-400 text-black shadow-md border-2 border-black"
+              : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
+          }"
+        >
+          ${cat}
+        </button>
+      `).join('');
+    }
+
+    function setBrand(brand) {
+      activeBrand = brand;
+      renderBrandPills();
+      renderProducts();
+    }
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      renderCategoryPills();
+      renderProducts();
+    }
+
+    function handleSearch(val) {
+      searchTerm = val;
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) {
+        if (val) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+      }
+      renderProducts();
+    }
+
+    function clearSearch() {
+      searchTerm = "";
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) searchInput.value = "";
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) clearBtn.classList.add('hidden');
+      renderProducts();
+    }
+
+    function resetFilters() {
+      activeCategory = "Todos";
+      activeBrand = "Todas";
+      clearSearch();
+      renderBrandPills();
+      renderCategoryPills();
+      renderProducts();
+    }
+
+    function toggleAdminMode() {
+      isAdminView = !isAdminView;
+      const btn = document.getElementById('adminToggleBtn');
+      const text = document.getElementById('adminToggleText');
+      const textMob = document.getElementById('adminToggleTextMobile');
+      const bar = document.getElementById('adminControlsBar');
+
+      if (isAdminView) {
+        btn.className = "px-3.5 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 border-2 bg-black text-lime-400 border-black shadow-md";
+        text.textContent = "Ver Modo Público";
+        if (textMob) textMob.textContent = "Ver Modo Público";
+        bar.classList.remove('hidden');
+      } else {
+        btn.className = "px-3.5 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 border-2 bg-slate-100 text-slate-800 hover:bg-slate-200 border-slate-200";
+        text.textContent = "Admin Panel";
+        if (textMob) textMob.textContent = "Panel de Administrador";
+        bar.classList.add('hidden');
+      }
+      renderProducts();
+      lucide.createIcons();
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const empty = document.getElementById('emptyState');
+
+      const filtered = products.filter(p => {
+        const matchCategory = activeCategory === "Todos" || p.category === activeCategory;
+        const matchBrand = activeBrand === "Todas" || p.brand === activeBrand;
+        const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            (p.brand && p.brand.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                            (p.description && p.description.toLowerCase().includes(searchTerm.toLowerCase()));
+        return matchCategory && matchBrand && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = "";
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      empty.classList.add('hidden');
+      grid.innerHTML = filtered.map((prod, idx) => {
+        const originalIndex = products.findIndex(p => p.id === prod.id);
+        const badgeColorClass = prod.badge === "HOT" 
+          ? "bg-red-600 text-white border-red-700 animate-pulse"
+          : prod.badge === "TOP SELLER"
+          ? "bg-amber-400 text-black border-amber-500"
+          : "bg-black text-lime-400 border-zinc-800";
+
+        const sizesHtml = Array.isArray(prod.sizes) 
+          ? prod.sizes.slice(0, 5).map(s => `<span class="text-xs font-extrabold border border-slate-200 rounded-lg px-2 py-1 bg-slate-50 text-slate-800">${s}</span>`).join('') +
+            (prod.sizes.length > 5 ? `<span class="text-[10px] font-bold text-slate-400 self-center">+${prod.sizes.length - 5} más</span>` : '')
+          : '';
+
+        return `
+          <div class="group bg-white rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-2xl hover:border-black transition-all duration-300 flex flex-col overflow-hidden relative">
+            ${isAdminView ? `
+              <div class="absolute top-3 right-3 z-20 flex space-x-1 bg-black/90 backdrop-blur-md p-1 rounded-xl border border-zinc-700">
+                <button onclick="openProductModal('${prod.id}')" class="p-2 text-blue-400 hover:bg-zinc-800 rounded-lg" title="Editar">
+                  <i data-lucide="edit" class="w-4 h-4"></i>
+                </button>
+                <button onclick="deleteProduct('${prod.id}')" class="p-2 text-red-400 hover:bg-zinc-800 rounded-lg" title="Eliminar">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+            ` : ''}
+
+            <!-- Badges Overlay -->
+            <div class="absolute top-3 left-3 z-10 flex flex-col gap-1.5 items-start">
+              ${prod.badge ? `<span class="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg border shadow-sm ${badgeColorClass}">${prod.badge}</span>` : ''}
+              <span class="bg-slate-900/90 text-white text-[9px] font-black uppercase px-2 py-0.5 rounded tracking-widest backdrop-blur-xs">
+                ${prod.brand || "Imported"}
+              </span>
+            </div>
+
+            <!-- Image Container -->
+            <div 
+              class="w-full h-72 bg-slate-100 overflow-hidden relative cursor-pointer flex items-center justify-center"
+              onclick="openProductDetail(${originalIndex})"
+            >
+              <img
+                src="${prod.image}"
+                alt="${prod.title}"
+                class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800'"
+              />
+              <div class="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black text-white text-[10px] font-black px-3 py-1.5 rounded-xl flex items-center gap-1 uppercase tracking-widest">
+                <span>Ver Detalle</span>
+                <i data-lucide="chevron-right" class="w-3 h-3 text-lime-400"></i>
+              </div>
+            </div>
+
+            <!-- Product Content Details -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">
+                  ${prod.category}
+                </div>
+                <h3 
+                  onclick="openProductDetail(${originalIndex})"
+                  class="font-black text-slate-900 text-lg leading-tight cursor-pointer hover:text-lime-600 transition uppercase italic tracking-tight"
+                >
+                  ${prod.title}
+                </h3>
+                <p class="text-xs text-slate-500 font-medium line-clamp-2 mt-2 leading-relaxed">
+                  ${prod.description || "Zapatilla original importada desde Estados Unidos."}
+                </p>
+              </div>
+
+              <!-- Sizes Preview -->
+              <div>
+                <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1.5">
+                  Tallas Disponibles (US):
+                </span>
+                <div class="flex flex-wrap gap-1.5">
+                  ${sizesHtml}
+                </div>
+              </div>
+
+              <!-- Price & Action Buttons -->
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">Precio Final</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight">$${prod.price} <span class="text-xs text-slate-500 font-bold">USD</span></span>
+                </div>
+
+                <div class="flex space-x-2">
+                  <button
+                    onclick="addToCart('${prod.id}')"
+                    class="p-3 bg-slate-100 hover:bg-black hover:text-lime-400 text-slate-900 rounded-2xl transition border border-slate-200"
+                    title="Agregar al Carrito"
+                  >
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                  </button>
+
+                  <button
+                    onclick="buySingleWhatsApp('${prod.id}')"
+                    class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs px-3.5 py-3 rounded-2xl shadow-md transition uppercase tracking-wider transform active:scale-95"
+                  >
+                    <i data-lucide="phone" class="w-3.5 h-3.5 fill-current"></i>
+                    <span>Comprar</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // Modal Details logic
+    function openProductDetail(index) {
+      const prod = products[index];
+      if (!prod) return;
+      selectedProductModal = prod;
+      selectedSizeModal = (prod.sizes && prod.sizes.length > 0) ? prod.sizes[0] : "9";
+
+      document.getElementById('modalDetailImage').src = prod.image;
+      document.getElementById('modalDetailTitle').textContent = prod.title;
+      document.getElementById('modalDetailDesc').textContent = prod.description || "Zapatilla original importada desde Estados Unidos.";
+      document.getElementById('modalDetailTag').textContent = `${prod.brand || 'Sneakers'} • ${prod.category}`;
+      document.getElementById('modalDetailPrice').textContent = `$${prod.price} USD`;
+
+      renderDetailSizes(prod.sizes);
+      document.getElementById('productDetailModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function renderDetailSizes(sizesList) {
+      const container = document.getElementById('modalDetailSizes');
+      if (!sizesList || sizesList.length === 0) {
+        container.innerHTML = '<span class="text-xs text-slate-500">Talla única</span>';
+        return;
+      }
+      container.innerHTML = sizesList.map(sz => `
+        <button
+          onclick="selectModalSize('${sz}')"
+          id="sizeBtn-${sz}"
+          class="px-3.5 py-2 rounded-xl text-xs font-extrabold border-2 transition ${
+            selectedSizeModal === sz
+              ? "bg-black text-lime-400 border-black shadow-md scale-105"
+              : "bg-slate-100 text-slate-800 border-slate-200 hover:bg-slate-200"
+          }"
+        >
+          US ${sz}
+        </button>
+      `).join('');
+    }
+
+    function selectModalSize(sz) {
+      selectedSizeModal = sz;
+      if (selectedProductModal) {
+        renderDetailSizes(selectedProductModal.sizes);
+      }
+    }
+
+    function closeProductDetail() {
+      document.getElementById('productDetailModal').classList.add('hidden');
+      selectedProductModal = null;
+    }
+
+    function addCurrentModalToCart() {
+      if (!selectedProductModal) return;
+      addToCart(selectedProductModal.id, selectedSizeModal);
+      closeProductDetail();
+    }
+
+    function buyCurrentModalWhatsApp() {
+      if (!selectedProductModal) return;
+      const size = selectedSizeModal || "N/A";
+      const message = `¡Hola *rodfashion.ve*! ⚡ Me interesa comprar este par importado de EE. UU.:\n\n👟 *Modelo:* ${selectedProductModal.title}\n📏 *Talla Elegida:* US ${size}\n💵 *Precio:* $${selectedProductModal.price} USD\n🚚 *Envío:* EE. UU. ➔ Venezuela\n\n¿Podrían indicarme la disponibilidad y métodos de pago?`;
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+      closeProductDetail();
+    }
+
+    function buySingleWhatsApp(productId) {
+      const prod = products.find(p => p.id === productId);
+      if (!prod) return;
+      const size = (prod.sizes && prod.sizes.length > 0) ? prod.sizes[0] : "N/A";
+      const message = `¡Hola *rodfashion.ve*! ⚡ Me interesa comprar este par importado de EE. UU.:\n\n👟 *Modelo:* ${prod.title}\n📏 *Talla:* US ${size}\n💵 *Precio:* $${prod.price} USD\n🚚 *Envío:* EE. UU. ➔ Venezuela\n\n¿Podrían indicarme la disponibilidad y cuentas bancarias/Zelle?`;
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // Cart Logic
+    function addToCart(productId, size) {
+      const prod = products.find(p => p.id === productId);
+      if (!prod) return;
+      const chosenSize = size || (prod.sizes && prod.sizes.length > 0 ? prod.sizes[0] : 'U');
+      const cartItemId = `${prod.id}-${chosenSize}`;
+
+      const existing = cart.find(item => item.cartItemId === cartItemId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...prod, chosenSize, cartItemId, qty: 1 });
+      }
+
+      updateCartUI();
+      openCart();
+    }
+
+    function removeFromCart(cartItemId) {
+      cart = cart.filter(item => item.cartItemId !== cartItemId);
+      updateCartUI();
+    }
+
+    function updateCartQty(cartItemId, delta) {
+      const item = cart.find(i => i.cartItemId === cartItemId);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        removeFromCart(cartItemId);
+      } else {
+        updateCartUI();
+      }
+    }
+
+    function updateCartUI() {
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      // Badges
+      const badge = document.getElementById('cartCountBadge');
+      const badgeMob = document.getElementById('cartCountBadgeMobile');
+      if (totalQty > 0) {
+        badge.textContent = totalQty;
+        badge.classList.remove('hidden');
+        badgeMob.textContent = totalQty;
+        badgeMob.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+        badgeMob.classList.add('hidden');
+      }
+
+      // Drawer Content
+      const cartList = document.getElementById('cartList');
+      const cartSubtotal = document.getElementById('cartSubtotal');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+
+      cartSubtotal.textContent = `$${totalPrice} USD`;
+
+      if (cart.length === 0) {
+        cartList.innerHTML = `
+          <div class="py-12 text-center text-slate-400 font-extrabold text-xs uppercase tracking-wider">
+            El carrito está vacío
+          </div>
+        `;
+        checkoutBtn.disabled = true;
+      } else {
+        checkoutBtn.disabled = false;
+        cartList.innerHTML = cart.map(item => `
+          <div class="py-4 flex items-center justify-between gap-3">
+            <img src="${item.image}" alt="${item.title}" class="w-16 h-16 object-cover rounded-xl border border-slate-200 bg-slate-50" />
+            <div class="flex-1">
+              <h4 class="text-xs font-black uppercase line-clamp-1">${item.title}</h4>
+              <div class="text-[10px] text-slate-500 font-bold mt-0.5">
+                Talla: US ${item.chosenSize} • $${item.price} USD c/u
+              </div>
+              <div class="flex items-center space-x-2 mt-2">
+                <button
+                  onclick="updateCartQty('${item.cartItemId}', -1)"
+                  class="w-5 h-5 bg-slate-200 text-black font-extrabold text-xs rounded flex items-center justify-center hover:bg-slate-300"
+                >
+                  -
+                </button>
+                <span class="text-xs font-black">${item.qty}</span>
+                <button
+                  onclick="updateCartQty('${item.cartItemId}', 1)"
+                  class="w-5 h-5 bg-slate-200 text-black font-extrabold text-xs rounded flex items-center justify-center hover:bg-slate-300"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="text-right">
+              <div class="text-xs font-black">$${item.price * item.qty} USD</div>
+              <button
+                onclick="removeFromCart('${item.cartItemId}')"
+                class="text-[10px] text-red-500 font-bold uppercase hover:underline mt-2"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function openCart() {
+      document.getElementById('cartDrawer').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeCart() {
+      document.getElementById('cartDrawer').classList.add('hidden');
+    }
+
+    function handleWhatsAppCheckout() {
+      if (cart.length === 0) return;
+
+      const itemsText = cart.map((item, index) => 
+        `${index + 1}. *${item.title}*\n   📏 Talla: US ${item.chosenSize} | 📦 Cant: ${item.qty} | 💵 $${item.price * item.qty}`
+      ).join('\n\n');
+
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      const message = `¡Hola *rodfashion.ve*! 🔥 Quiero realizar la compra de los siguientes calzados importados de EE. UU.:\n\n${itemsText}\n\n💰 *TOTAL A PAGAR:* $${totalPrice} USD\n🚚 *Destino:* Venezuela (Envío Aéreo/Marítimo)\n✉️ *Contacto Admin:* ${adminEmail}\n\n¿Me indican las cuentas bancarias/Zelle y pasos para confirmar el pago?`;
+
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // Admin Add/Edit Operations
+    function openProductModal(productId = null) {
+      const modal = document.getElementById('productFormModal');
+      const title = document.getElementById('formModalTitle');
+      const form = document.getElementById('productForm');
+
+      if (productId) {
+        const p = products.find(prod => prod.id === productId);
+        if (!p) return;
+        title.textContent = "Editar Calzado";
+        document.getElementById('formProductId').value = p.id;
+        document.getElementById('formTitle').value = p.title || '';
+        document.getElementById('formBrand').value = p.brand || 'Nike';
+        document.getElementById('formCategory').value = p.category || 'Sneakers';
+        document.getElementById('formPrice').value = p.price || '';
+        document.getElementById('formBadge').value = p.badge || 'NEW';
+        document.getElementById('formSizes').value = Array.isArray(p.sizes) ? p.sizes.join(', ') : (p.sizes || '');
+        document.getElementById('formImage').value = p.image || '';
+        document.getElementById('formDescription').value = p.description || '';
+      } else {
+        title.textContent = "Agregar Nuevo Zapato al Catálogo";
+        form.reset();
+        document.getElementById('formProductId').value = '';
+        document.getElementById('formSizes').value = '8, 8.5, 9, 9.5, 10, 11';
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeProductModal() {
+      document.getElementById('productFormModal').classList.add('hidden');
+    }
+
+    function handleProductFormSubmit(e) {
+      e.preventDefault();
+      const id = document.getElementById('formProductId').value;
+      const title = document.getElementById('formTitle').value;
+      const brand = document.getElementById('formBrand').value;
+      const category = document.getElementById('formCategory').value;
+      const price = Number(document.getElementById('formPrice').value);
+      const badge = document.getElementById('formBadge').value;
+      const rawSizes = document.getElementById('formSizes').value;
+      const image = document.getElementById('formImage').value;
+      const description = document.getElementById('formDescription').value;
+
+      const formattedSizes = rawSizes.split(',').map(s => s.trim()).filter(Boolean);
+
+      if (id) {
+        // Edit
+        const idx = products.findIndex(p => p.id === id);
+        if (idx !== -1) {
+          products[idx] = {
+            ...products[idx],
+            title,
+            brand,
+            category,
+            price,
+            badge,
+            sizes: formattedSizes.length ? formattedSizes : ["8", "9", "10"],
+            image,
+            description
+          };
+        }
+      } else {
+        // Add new
+        const newProduct = {
+          id: `custom-${Date.now()}`,
+          title,
+          brand,
+          category,
+          price,
+          badge,
+          sizes: formattedSizes.length ? formattedSizes : ["8", "9", "10"],
+          image,
+          description
+        };
+        products.unshift(newProduct);
+      }
+
+      closeProductModal();
+      renderProducts();
+    }
+
+    function deleteProduct(productId) {
+      if (confirm("¿Seguro que deseas eliminar este calzado del catálogo?")) {
+        products = products.filter(p => p.id !== productId);
+        renderProducts();
+      }
+    }
+
+    // Run on startup
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
